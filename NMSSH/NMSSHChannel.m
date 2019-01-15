@@ -349,6 +349,9 @@
             else if (rc > 0) {
                 NSData *data = [[NSData alloc] initWithBytes:buffer length:rc];
                 NSString *response = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+                if (response == nil) {
+                    response = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
+                }
                 [self setLastResponse:[response copy]];
 
                 if (response && self.delegate && [self.delegate respondsToSelector:@selector(channel:didReadData:)]) {
