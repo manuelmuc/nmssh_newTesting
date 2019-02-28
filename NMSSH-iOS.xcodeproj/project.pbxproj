@@ -344,8 +344,8 @@
 				6DE965432228327400B04151 /* libssh2.a */,
 			);
 			name = lib;
-			path = "NMSSH-iOS/lib";
-			sourceTree = SOURCE_ROOT;
+			path = ../lib;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
